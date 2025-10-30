@@ -1743,7 +1743,8 @@ https://flask-todo-app.onrender.com
 ## บันทึกรูปผลการทำงาน
 
 # บันทึกรูปผลการทำงานที่นี่
-<img width="1458" height="839" alt="image" src="https://github.com/user-attachments/assets/9226b073-0fd7-46bc-beb0-669224885830" />
+<img width="1809" height="969" alt="image" src="https://github.com/user-attachments/assets/e7401767-34f3-4b1e-a842-85dba8ec5298" />
+
 
 ``
 
@@ -2155,14 +2156,20 @@ docker-compose up -d
 
 1. **Docker Architecture**:
    - เหตุใดจึงต้องแยก database และ application เป็นคนละ containers ?
-   - Multi-stage build มีประโยชน์อย่างไร?
+   การแยก Database และ Application ออกเป็นคนละ container
+ช่วยให้ระบบมีความยืดหยุ่น ปลอดภัย และง่ายต่อการจัดการตามหลัก microservices
+โดยแต่ละ container มีหน้าที่เฉพาะ ทำให้สามารถอัปเดต บำรุงรักษา หรือขยายระบบได้อย่างอิสระ
+และลดผลกระทบระหว่างกันเมื่อเกิดข้อผิดพลาดในส่วนใดส่วนหนึ่งของระบบ
 
 2. **Testing Strategy**:
    - การวัด code coverage มีความสำคัญอย่างไร?
+   การวัด Code Coverage มีความสำคัญเพราะช่วยให้เราทราบว่า “ส่วนของโค้ดที่เราเขียนถูกทดสอบแล้วมากน้อยเพียงใด”
+ซึ่งช่วยตรวจสอบคุณภาพของระบบ ลดความเสี่ยงจากบั๊ก และเพิ่มความมั่นใจในการ deploy code ขึ้น production
 
 3. **Deployment**:
    - Health check endpoint มีความสำคัญอย่างไร?
    - Render และ Railway มีความแตกต่างกันอย่่างไร?
+   Health Check Endpoint มีความสำคัญต่อการตรวจสอบสถานะของแอปพลิเคชันในกระบวนการ Deployment เพื่อให้มั่นใจว่าระบบพร้อมให้บริการและทำงานได้ตามปกติ ส่วน Render และ Railway แม้จะเป็นบริการ Cloud สำหรับ deploy แอปคล้ายกัน แต่แตกต่างในด้านความสะดวกและรูปแบบการใช้งาน โดย Render เหมาะกับการใช้งานจริงในระดับ production ส่วน Railway เหมาะกับการทดลอง พัฒนา และ deploy อย่างรวดเร็วในโครงการขนาดเล็กถึงปานกลาง
 
 
 ---
